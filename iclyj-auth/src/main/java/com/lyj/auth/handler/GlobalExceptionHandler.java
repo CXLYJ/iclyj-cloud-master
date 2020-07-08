@@ -7,8 +7,6 @@ import com.lyj.common.core.exception.DemoModeException;
 import com.lyj.common.core.utils.StringUtils;
 import com.lyj.common.core.web.domain.AjaxResult;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
