@@ -13,7 +13,7 @@
         <module>iclyj-common</module>
         <module>iclyj-api</module>
         <module>iclyj-modules</module>
-        <module>icly-auth</module>
+        <module>iclyj-auth</module>
         <module>iclyj-gateway</module>
         <module>iclyj-tool</module>
     </modules>
