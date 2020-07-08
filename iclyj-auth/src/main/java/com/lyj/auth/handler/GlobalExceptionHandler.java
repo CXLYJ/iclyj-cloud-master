@@ -6,6 +6,7 @@ import com.lyj.common.core.exception.CustomException;
 import com.lyj.common.core.exception.DemoModeException;
 import com.lyj.common.core.utils.StringUtils;
 import com.lyj.common.core.web.domain.AjaxResult;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.AccessDeniedException;
@@ -22,11 +23,10 @@ import org.springframework.web.servlet.NoHandlerFoundException;
  * 
  * @author ruoyi
  */
+@Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler
 {
-    private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
-
     /**
      * 基础异常
      */
