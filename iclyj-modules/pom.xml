@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>iclyj-cloud-master</artifactId>
+        <groupId>com.lyj</groupId>
+        <version>2.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>iclyj-modules</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        业务模块
+    </description>
+
+    
+    <modules>
+        <module>iclyj-system</module>
+        <module>iclyj-system-test</module>
+    </modules>
+
+    <dependencies>
+        <!-- SpringCloud Ailibaba Nacos -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <!-- SpringCloud Ailibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
+
+
+        <!--
+         SpringCloud Netflix Hystrix 和 SpringBoot Web 两个依赖不添加会导致两个错误:
+         Did you forget to include a starter? 和 Unable to start web server
+         网上查看原因：
+         这个的原因是 spring cloud版本和springboot版本不一致引起的。
+         -->
+
+        <!-- SpringCloud Netflix Hystrix -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <!-- Swagger -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.fox.version}</version>
+        </dependency>
+
+        <!-- SpringBoot Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lyj</groupId>
+            <artifactId>iclyj-common-swagger</artifactId>
+        </dependency>
+
+        <!-- iclyj Common Security -->
+        <dependency>
+            <groupId>com.lyj</groupId>
+            <artifactId>iclyj-common-security</artifactId>
+        </dependency>
+
+        <!-- iclyj Common Datascope -->
+      <!--  <dependency>
+            <groupId>iclyj</groupId>
+            <artifactId>iclyj-common-datascope</artifactId>
+        </dependency>-->
+        
+
+        <!-- Ruoyi Common Swagger -->
+        <dependency>
+            <groupId>com.lyj</groupId>
+            <artifactId>iclyj-common-swagger</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.lyj</groupId>
+            <artifactId>iclyj-common-log</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
