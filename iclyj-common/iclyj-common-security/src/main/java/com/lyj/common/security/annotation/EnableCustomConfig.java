@@ -1,7 +1,11 @@
 package com.lyj.common.security.annotation;
 
+import com.lyj.common.security.config.ApplicationConfig;
+import com.lyj.common.security.config.SecurityImportBeanDefinitionRegistrar;
+import com.lyj.common.security.feign.OAuth2FeignConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 import java.lang.annotation.*;
@@ -30,6 +34,7 @@ import java.lang.annotation.*;
 @MapperScan("com.lyj.**.mapper")
 // 开启线程异步执行
 @EnableAsync
+@Import({ SecurityImportBeanDefinitionRegistrar.class, OAuth2FeignConfig.class, ApplicationConfig.class })
 public @interface EnableCustomConfig
 {
 }
