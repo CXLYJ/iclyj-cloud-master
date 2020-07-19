@@ -1,6 +1,8 @@
 package com.lyj.system.service;
 
 
+import com.lyj.system.domain.SysMenu;
+
 import java.util.List;
 import java.util.Set;
 
@@ -19,6 +21,9 @@ public interface ISysMenuService
      * @return 权限列表
      */
     public Set<String> selectMenuPermsByUserId(Long userId);
+
+
+    List<SysMenu> selectMenuList();
 
 
 }
