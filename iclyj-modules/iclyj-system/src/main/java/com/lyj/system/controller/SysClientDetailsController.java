@@ -27,6 +27,11 @@ public class SysClientDetailsController extends BaseController
     @Autowired
     private ISysClientDetailsService sysClientDetailsService;
 
+    @GetMapping("listAll")
+    public AjaxResult ListAllClient(){
+        return AjaxResult.success(sysClientDetailsService.selectSysClientDetailsList(null));
+    }
+
     /**
      * 查询终端配置列表
      */

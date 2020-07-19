@@ -1,6 +1,7 @@
 package com.lyj.system.service.impl;
 
 import com.lyj.common.core.utils.StringUtils;
+import com.lyj.system.domain.SysMenu;
 import com.lyj.system.mapper.SysMenuMapper;
 import com.lyj.system.service.ISysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,16 @@ public class SysMenuServiceImpl implements ISysMenuService
             }
         }
         return permsSet;
+    }
+
+    /**
+     * 查询所有菜单
+     *
+     * @return
+     */
+    @Override
+    public List<SysMenu> selectMenuList() {
+        return menuMapper.selectMenuList();
     }
 
 }
