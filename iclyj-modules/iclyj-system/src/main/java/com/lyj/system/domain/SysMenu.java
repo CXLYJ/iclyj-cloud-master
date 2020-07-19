@@ -1,6 +1,8 @@
 package com.lyj.system.domain;
 
+import com.alibaba.excel.annotation.ExcelProperty;
 import com.lyj.common.core.web.domain.BaseEntity;
+import lombok.Builder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
@@ -14,6 +16,7 @@ import java.util.List;
  * 
  * @author ruoyi
  */
+@Builder
 public class SysMenu extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
@@ -22,15 +25,19 @@ public class SysMenu extends BaseEntity
     private Long menuId;
 
     /** 菜单名称 */
+    @ExcelProperty("菜单名称")
     private String menuName;
 
     /** 父菜单名称 */
+    @ExcelProperty("父菜单名称")
     private String parentName;
 
     /** 父菜单ID */
+    @ExcelProperty("父菜单ID")
     private Long parentId;
 
     /** 显示顺序 */
+    @ExcelProperty("显示顺序")
     private String orderNum;
 
     /** 路由地址 */
