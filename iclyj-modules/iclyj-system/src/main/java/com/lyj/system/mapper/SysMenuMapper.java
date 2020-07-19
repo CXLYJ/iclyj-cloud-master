@@ -1,6 +1,8 @@
 package com.lyj.system.mapper;
 
 
+import com.lyj.system.domain.SysMenu;
+
 import java.util.List;
 
 /**
@@ -19,4 +21,10 @@ public interface SysMenuMapper
      */
     public List<String> selectMenuPermsByUserId(Long userId);
 
+    /**
+     * 查询所有菜单
+     *
+     * @return
+     */
+    List<SysMenu> selectMenuList();
 }
